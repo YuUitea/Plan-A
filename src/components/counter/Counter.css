@@ -1,0 +1,22 @@
+.counter-button {
+  background-color: antiquewhite;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100px;
+  padding: 15px 30px;
+  margin: 10px;
+}
+
+.count {
+  font-size: 36px;
+  padding: 15px 30px;
+}
+
+.reset-button {
+  background-color: antiquewhite;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  padding: 15px 30px;
+  margin: 10px;
+}
