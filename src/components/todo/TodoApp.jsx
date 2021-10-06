@@ -1,7 +1,8 @@
 import {Component} from "react/cjs/react.production.min";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import LoginComponent from "./Login";
 import WelcomeComponent from "./Welcome";
+import ErrorComponent from "./ErrorHandling";
 
 class TodoApp extends Component {
   render() {
@@ -9,9 +10,13 @@ class TodoApp extends Component {
         <div className="TodoApp">
           <Router>
             <>
-              <Route path="/" exact component={LoginComponent} />
-              <Route path="/login" component={LoginComponent} />
-              <Route path="/welcome" component={WelcomeComponent} />
+              <Switch>
+                <Route path="/" exact component={LoginComponent}/>
+                <Route path="/login" component={LoginComponent}/>
+                <Route path="/welcome/" component={WelcomeComponent}/>
+                {/* Redirect to error component if path is undefined */}
+                <Route component={ErrorComponent}/>
+              </Switch>
             </>
           </Router>
         </div>
