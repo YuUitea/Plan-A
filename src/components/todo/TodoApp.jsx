@@ -13,7 +13,7 @@ class TodoApp extends Component {
               <Switch>
                 <Route path="/" exact component={LoginComponent}/>
                 <Route path="/login" component={LoginComponent}/>
-                <Route path="/welcome/" component={WelcomeComponent}/>
+                <Route path="/welcome/:userName" component={WelcomeComponent}/>
                 {/* Redirect to error component if path is undefined */}
                 <Route component={ErrorComponent}/>
               </Switch>

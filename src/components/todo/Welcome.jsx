@@ -4,7 +4,7 @@ class WelcomeComponent extends Component {
   render() {
     return (
         <div>
-          Welcome
+          Welcome {this.props.match.params.userName}
         </div>
     );
   }

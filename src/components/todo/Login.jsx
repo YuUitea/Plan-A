@@ -31,7 +31,7 @@ class LoginComponent extends Component {
         loginValidated: true,
         loginFailed: false
       });
-      this.props.history.push("/welcome");
+      this.props.history.push(`/welcome/${this.state.userName}`);
       console.debug("Login successful")
     } else {
       this.setState({
