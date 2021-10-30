@@ -4,6 +4,8 @@ import LoginComponent from "./Login";
 import WelcomeComponent from "./Welcome";
 import ErrorComponent from "./ErrorHandling";
 import ListTodosComponent from "./ListTodos";
+import HeaderComponent from "./Header";
+import FooterComponent from "./Footer";
 import LogoutComponent from "./Logout";
 
 class TodoApp extends Component {
