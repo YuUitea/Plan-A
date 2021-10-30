@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class LoginComponent extends Component {
 
   constructor(props) {
-    super();
+    super(props);
 
     this.state = {
       userName: '',
