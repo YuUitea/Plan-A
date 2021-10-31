@@ -14,12 +14,12 @@ class FooterComponent extends Component {
             </div>
             <ul className="nav col-md-3 justify-content-end list-unstyled d-flex">
               <li className="ms-3">
-                <a className="nav-link text-muted" target="_blank" href="https://github.com/YuUitea/Plan-A">
+                <a className="nav-link text-muted" target="_blank" rel="noreferrer" href="https://github.com/YuUitea/Plan-A">
                   <FontAwesomeIcon icon={['fab', 'github']} size="lg"/>
                 </a>
               </li>
               <li className="ms-3">
-                <a className="nav-link text-muted" target="_blank" href="http://www.linkedin.com/in/yuyatian">
+                <a className="nav-link text-muted" target="_blank" rel="noreferrer" href="http://www.linkedin.com/in/yuyatian">
                   <FontAwesomeIcon icon={['fab', 'linkedin']} size="lg"/>
                 </a>
               </li>

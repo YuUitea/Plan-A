@@ -11,7 +11,7 @@ class HeaderComponent extends Component {
         <header>
           <nav className="navbar navbar-expand-md navbar-light bg-light">
             <div>
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="/">
                 <FontAwesomeIcon className="mb-3 me-2 mb-md-0" icon={['fab', 'autoprefixer']}/>
                 Plan A
               </a>
