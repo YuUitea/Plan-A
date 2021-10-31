@@ -8,7 +8,7 @@ class WelcomeComponent extends Component {
         <>
           <h1 className="display-6 text-primary flex-wrap">
             <FontAwesomeIcon className="mb-3 me-2 mb-md-0"
-                             icon={['fab', 'autoprefixer']}
+                             icon={['fa', 'calendar-check']}
                              size="md"/>
             Welcome to Plan A, {this.props.match.params.userName}!
           </h1>
