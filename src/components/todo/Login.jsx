@@ -1,5 +1,6 @@
 import {Component} from "react/cjs/react.production.min";
 import PropTypes from "prop-types";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class LoginComponent extends Component {
 
@@ -45,10 +46,38 @@ class LoginComponent extends Component {
   render() {
     return (
         <>
-          <ShowLoginMessage loginValidated={this.state.loginValidated} loginFailed={this.state.loginFailed} />
-          User Name: <input name="userName" type="text" value={this.state.userName} onChange={this.handleInputChange} />
-          Password:  <input name="password" type="password" value={this.state.password} onChange={this.handleInputChange} />
-          <button onClick={this.login}>Login</button>
+          <div className="container m-3">
+            <h1 className="display-6 text-primaryflex-wrap">
+              Welcome to Plan A - a simple Todo App. No more plan B.
+            </h1>
+            <ShowLoginMessage loginValidated={this.state.loginValidated}
+                              loginFailed={this.state.loginFailed}/>
+            <form className="g-3">
+              <div className="form-floating mb-3">
+                <input className="form-control" name="userName"
+                       type="text" value={this.state.userName}
+                       placeholder="Email or user name"
+                       onChange={this.handleInputChange}/>
+                <label htmlFor="userName">Email or user name</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input className="form-control" name="password"
+                       type="password" value={this.state.password}
+                       placeholder="Password"
+                       onChange={this.handleInputChange}/>
+                <label htmlFor="password">Password</label>
+              </div>
+              <div className="d-grid gap-2 col-6 mx-auto">
+                <button className="btn btn-outline-primary" type="button"
+                        onClick={this.login}>
+                  Sign in
+                </button>
+                <button className="btn btn-outline-secondary" type="button">
+                  Sign up
+                </button>
+              </div>
+            </form>
+          </div>
         </>
     );
   }
@@ -62,14 +91,16 @@ function ShowLoginMessage(props) {
 
   if (props.loginFailed) {
     return (
-        <div className="login-failure">
-          Invalid Credentials
+        <div className="alert alert-danger d-flex align-items-center" role="alert">
+          <FontAwesomeIcon className="flex-shrink-0 me-2" icon={["fas", "exclamation-triangle"]}/>
+          <span>Invalid Credentials</span>
         </div>
     );
   } else {
     return (
-        <div className="login-success">
-          Login Successful
+        <div className="alert alert-info d-flex align-items-center" role="alert">
+          <FontAwesomeIcon className="flex-shrink-0 me-2" icon={["fas", "info-circle"]}/>
+          <span>Login Successful</span>
         </div>
     );
   }

@@ -1,5 +1,4 @@
 import {Component} from "react/cjs/react.production.min";
-import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 class FooterComponent extends Component {
