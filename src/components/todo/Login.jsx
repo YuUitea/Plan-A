@@ -47,7 +47,7 @@ class LoginComponent extends Component {
     return (
         <>
           <div className="container m-3">
-            <h1 className="display-6 text-primaryflex-wrap">
+            <h1 className="display-6 text-primary flex-wrap">
               Welcome to Plan A - a simple Todo App. No more plan B.
             </h1>
             <ShowLoginMessage loginValidated={this.state.loginValidated}
