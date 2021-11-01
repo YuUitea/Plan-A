@@ -1,7 +1,7 @@
 import {Component} from "react/cjs/react.production.min";
 import PropTypes from 'prop-types';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Authentication from "./auth/Authentication.js";
+import AuthenticationService from "../../api/todo/AuthenticationService";
 
 class LoginComponent extends Component {
 
@@ -29,7 +29,7 @@ class LoginComponent extends Component {
   login = (event) => {
     console.debug(`Login button is clicked`);
     if (this.state.userName === "yuyat" && this.state.password === "dummy") {
-      Authentication.login(this.state.userName, this.state.password);
+      AuthenticationService.login(this.state.userName, this.state.password);
       this.setState({
         loginValidated: true,
         loginFailed: false

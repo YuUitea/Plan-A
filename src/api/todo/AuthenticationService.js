@@ -1,7 +1,7 @@
 
 const AUTHENTICATED_USER_KEY = 'authenticatedUser';
 
-class Authentication {
+class AuthenticationService {
 
   login(userName, password) {
     sessionStorage.setItem(AUTHENTICATED_USER_KEY, userName);
@@ -19,4 +19,4 @@ class Authentication {
   }
 }
 
-export default new Authentication();
+export default new AuthenticationService();

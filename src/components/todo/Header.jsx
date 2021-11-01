@@ -1,12 +1,12 @@
 import {Component} from "react/cjs/react.production.min";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import Authentication from "./auth/Authentication";
+import AuthenticationService from "../../api/todo/AuthenticationService";
 import {withRouter} from 'react-router';
 
 class HeaderComponent extends Component {
   render() {
-    const isUserAuthenticated = Authentication.isUserAuthenticated();
+    const isUserAuthenticated = AuthenticationService.isUserAuthenticated();
     return (
         <header>
           <nav className="navbar navbar-expand-md navbar-light bg-light">
@@ -39,7 +39,7 @@ class HeaderComponent extends Component {
                 isUserAuthenticated &&
                 <li className="nav-item">
                   <Link className="nav-link" to="/logout"
-                        onClick={Authentication.logout}>Logout</Link>
+                        onClick={AuthenticationService.logout}>Logout</Link>
                 </li>
               }
             </ul>
