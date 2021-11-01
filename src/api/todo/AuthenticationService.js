@@ -17,6 +17,11 @@ class AuthenticationService {
     let userName = sessionStorage.getItem(AUTHENTICATED_USER_KEY);
     return userName !== null;
   }
+
+  getAuthenticatedUser() {
+    let userName = sessionStorage.getItem(AUTHENTICATED_USER_KEY);
+    return userName === null ? "" : userName;
+  }
 }
 
 export default new AuthenticationService();
